@@ -28,7 +28,10 @@ public class AutoreServiceImpl implements AutoreService {
 
     @Transactional(readOnly = true)
     public Autore caricaSingoloElementoConLibri(Long id) {
-        return repository.findById(id).orElse(null);
+    	return repository.findById(id).map(autore -> {
+            autore.getLibri().size(); 
+            return autore;
+        }).orElse(null);
     }
 
     @Transactional

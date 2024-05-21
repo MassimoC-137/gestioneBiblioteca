@@ -95,4 +95,12 @@ public class Autore {
     public void setDataNascita(LocalDate dataNascita) {
         this.dataNascita = dataNascita;
     }
+
+    public List<Libro> getLibri() {
+        return libri;
+    }
+
+    public void setLibri(List<Libro> libri) {
+        this.libri = libri;
+    }
 }
