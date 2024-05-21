@@ -22,4 +22,7 @@ public interface AutoreService {
     public List<Autore> findAllWithLibri();
     
     public List<Autore> findAllByGenereWithLibri(Genere genere);
+    
+    public List<Autore> findByExample(Autore example); 
+    
 }

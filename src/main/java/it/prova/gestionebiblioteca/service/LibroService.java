@@ -17,4 +17,6 @@ public interface LibroService {
 	
 	public  void rimuovi(Long id);
 	
+	public List<Libro> findByExample(Libro example); 
+	
 }

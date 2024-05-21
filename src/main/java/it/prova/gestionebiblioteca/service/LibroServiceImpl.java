@@ -41,4 +41,8 @@ public class LibroServiceImpl implements LibroService {
         repository.deleteById(id);
     }
 
+    @Transactional(readOnly = true)
+	public List<Libro> findByExample(Libro example) {
+		return repository.findByExample(example);
+	}
 }

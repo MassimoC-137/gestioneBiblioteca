@@ -55,5 +55,9 @@ public class AutoreServiceImpl implements AutoreService {
     public List<Autore> findAllByGenereWithLibri(Genere genere) {
         return repository.findAllByGenereWithLibri(genere);
     }
-
+    
+    @Transactional(readOnly = true)
+	public List<Autore> findByExample(Autore example) {
+		return repository.findByExample(example);
+	}
 }

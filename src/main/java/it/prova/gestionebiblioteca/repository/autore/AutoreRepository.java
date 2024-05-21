@@ -9,7 +9,7 @@ import it.prova.gestionebiblioteca.model.Genere;
 
 import java.util.List;
 
-public interface AutoreRepository extends JpaRepository<Autore, Long> {
+public interface AutoreRepository extends JpaRepository<Autore, Long>, CustomAutoreRepository {
 
 	@EntityGraph(attributePaths = { "libri" })
 	List<Autore> findAllWithLibri();
